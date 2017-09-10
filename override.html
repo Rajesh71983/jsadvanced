@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="sum"  id="dummyBtn" value="i am dummy. please click the button below to make me functioning" >
+	<input type="button" name="sum2" value="click me" onclick="sumOfEle();">
+	
+	
+
+</body>
+<script type="text/javascript">
+		
+
+
+		var Point = function(name){
+			this.a = name;
+			
+		}
+
+		Point.prototype = { 
+			drive: function(){
+					return this.a;
+				}
+		}
+
+		var Point1 = function(name){
+			this.a = name;
+		}
+
+		Point1.prototype = new Point();
+		Point1.prototype.constructor = Point1;
+
+		Point1.prototype = {
+			drive: function(){
+				var heredrive = Point.prototype.drive.apply(this);
+				return heredrive += "some thing";
+			}
+		}
+
+		var Point1Ins = new Point1("rajesh");
+		var PointIns = new Point("rajesh");
+
+		console.log(Point1Ins.drive());
+		console.log(PointIns.drive());
+
+		
+
+
+
+			
+</script>
+</html>

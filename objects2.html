@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="sum"  id="dummyBtn" value="i am dummy. please click the button below to make me functioning" >
+	<input type="button" name="sum2" value="click me" onclick="sumOfEle();">
+	
+	
+
+</body>
+<script type="text/javascript">
+		var emp = function(){
+			this.name = "rajesh";
+		}
+
+		
+
+		var emp1 = new emp();
+
+		console.log(emp1 instanceof emp);
+		emp.prototype.age = 34;
+
+		var emp2 = new emp();
+		console.log(emp.hasOwnProperty("age"));
+		console.log(emp.hasOwnProperty("name"));
+
+		console.log(emp1);
+		console.log(emp2 == emp1);
+
+		//getters and setters examples
+
+		var o = {
+		  a: 7,
+		  get b() { 
+		    return this.a + 1;
+		  },
+		  set c(x) {
+		    this.a = x / 2;
+		  }
+		};
+
+		console.log(o.a); // 7
+		console.log(o.b); // 8
+		o.c = 50;
+		console.log(o.a); // 25
+	
+		//getters and setters using defineProperty
+
+
+		var Point = function(){
+			this.a = 0;
+			this.b = 0;
+		}
+
+		Object.defineProperty(Point.prototype,"pointpos",
+		{
+			get: function(){
+				return (this.a + this.b )
+
+			},
+			set: function(somePoint){
+				this.a = somePoint.a;
+				this.b = somePoint.b;
+
+			}
+		})
+
+		var newPoint = new Point();
+
+		newPoint.pointpos = {a:10,b:20};
+
+		console.log(newPoint.pointpos)
+
+		//getters and setter ecmas 5.1
+
+		var Circle = function(radius){
+			this._radius = radius;
+		}
+
+		Circle.prototype={
+			set radius(radius) { this._radius = radius},
+			get radius() { return this._radius},
+			get area(){ return this._radius * this._radius}
+
+		}
+
+		var Circleins = new Circle(10);
+
+		Circleins.radius = 15;
+		console.log(Circleins.radius +""+ Circleins.area) 
+
+			
+</script>
+</html>
