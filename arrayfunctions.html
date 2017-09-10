@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="AddEle" value="AddEle" onclick="addElementToArray();">
+	<input type="button" name="removeChild" value="removeChild" onclick="removeChildFromDiv();">
+
+</body>
+<script type="text/javascript">
+	var ar1 = [];
+
+	ar1[0] = "jag1";
+	ar1[1] = "jag2";
+	ar1[2] = "jag3";
+	ar1[3] = "jag4";
+	ar1[4] = "2jag4";
+
+	ar1.push("hello");
+
+	for(k in ar1){
+		console.log(ar1[k]);
+	}
+
+	ar1.pop(); //remove element from bottom
+
+	for(k in ar1){
+		console.log(ar1[k]);
+	}
+
+	ar1.shift(); //remove element from top
+
+	for(k in ar1){
+		console.log(ar1[k]);
+	}
+
+	ar1.unshift('unshift'); //adds  element from top
+
+	for(k in ar1){
+		console.log(ar1[k]);
+	}
+
+
+</script>
+</html>

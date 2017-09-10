@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="sum"  id="dummyBtn" value="i am dummy. please click the button below to make me functioning" >
+	<input type="button" name="sum2" value="click me" onclick="sumOfEle();">
+	
+	
+
+</body>
+<script type="text/javascript">
+		var emp = [];
+		emp["ename"] ="rage";
+		emp["esal"] ="1000";
+		emp["egae"] ="34";
+		emp["estae"] ="il";
+
+		console.log(emp.ename);
+
+		var emp1 = new Object();
+			emp1.name = "rajesh";
+			emp1.age = "34";
+
+		var emp2 ={};
+			emp2.name = "rajesh";
+			emp2.age = "34";
+
+		var emp3 ={"name":"rajesh","age":"34"};
+
+		console.log(emp3.name)
+
+		for(k in emp1){
+			console.log(k+" value "+emp1[k])
+		}
+			
+		alert(Object.keys(emp1)) //returns an array of objct properties
+
+
+		var objPropAr = Object.keys(emp1);
+
+		for(i=0; i < objPropAr.length; i++){
+			alert(objPropAr[i] + " value "+emp1[objPropAr[i]])
+		}
+
+	
+</script>
+</html>

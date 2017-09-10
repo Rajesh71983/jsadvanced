@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="sum" value="sum result" onclick="sumOfEle(11,2);">
+	<input type="button" name="sum2" value="sum result" onclick="sumOfEle(12,6,mulOfEle2);">
+	
+	
+
+</body>
+<script type="text/javascript">
+	
+	function sumOfEle(a,b){
+		//alert("sum is "+ (a+b).toString());
+
+		var sumOfEle2 = function(){ // parameters not required as they access parent function params
+			alert("callback sum is "+ (a+b).toString());
+		}
+		var sumOfEle = function(){
+			alert("callback sum is "+ (a*b).toString());
+		}
+
+		sumOfEle2();
+		return sumOfEle;
+	}
+
+	var a = sumOfEle(10,20);
+	alert("main function executed");
+
+	a();
+	alert("2nd call function executed");
+	a(50,6);
+
+	
+
+	
+</script>
+</html>

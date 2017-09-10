@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="AddEle" value="AddEle" onclick="addElementToArray();">
+	<input type="button" name="removeChild" value="removeChild" onclick="removeChildFromDiv();">
+
+</body>
+<script type="text/javascript">
+	var ar1 = Array(4);
+
+	ar1["one0"] = "jag1";
+	ar1["one1"] = "jag2";
+	ar1["one2"] = "jag3";
+	ar1["one3"] = "jag4";
+	ar1["one4"] = "2jag4";
+
+	for(key in ar1){
+		console.log(ar1[key]);
+	}
+</script>
+</html>

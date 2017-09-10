@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="sum"  id="dummyBtn" value="i am dummy. please click the button below to make me functioning" >
+	<input type="button" name="sum2" value="click me" onclick="sumOfEle();">
+	
+	
+
+</body>
+<script type="text/javascript">
+		
+		var AnnuSal = function(){
+			return this.Sal * 12;
+		}
+
+		var empObj = {
+
+			ename:"rajesh",
+			Sal:1000,
+			AnnuSalary: AnnuSal
+		}
+
+		console.log("emp "+empObj.ename+" annual sal"+ empObj.AnnuSalary().toString())
+
+		var empObj2 = {
+
+			ename:"rajesh",
+			Sal:1000,
+			AnnuSalary: function(){
+				return this.Sal * 12
+			}
+		}
+
+		console.log("emp "+empObj2.ename+" annual sal"+ empObj2.AnnuSalary().toString())
+</script>
+</html>

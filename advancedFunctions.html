@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="sum" value="sum result" onclick="sumOfEle(1,2,3,4,5);">
+	<input type="button" name="sum2" value="sum result" onclick="alert(sumOfEle2(1,2,3,4,5));">
+	
+	
+
+</body>
+<script type="text/javascript">
+	
+	function sumOfEle(){
+		var total = 0;
+		for(i=0;i<arguments.length;i++){
+			console.log(arguments[i]);
+			total += arguments[i];
+		}
+		console.log(total.toString());
+	}
+
+	function sumOfEle2(){
+		var total = 0;
+		for(i=0;i<arguments.length;i++){
+			console.log(arguments[i]);
+			total += arguments[i];
+		}
+		return total.toString();
+	}
+
+
+
+	(function(){
+		alert("Hello world");
+	})();
+
+	var resultVar = (function(a,b){
+		return  (a+b).toString();
+	})(10,20);
+
+	alert(resultVar)
+
+	alert((function(a,b){
+		return  (a+b).toString();
+	})(10,200))
+</script>
+</html>

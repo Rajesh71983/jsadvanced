@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="sum"  id="dummyBtn" value="i am dummy. please click the button below to make me functioning" >
+	<input type="button" name="sum2" value="click me" onclick="sumOfEle();">
+	
+	
+
+</body>
+<script type="text/javascript">		
+
+		var empObj =  function(ename,sal){
+
+			this.ename=ename;
+			this.sal=sal;
+			var name ="raj"; //private member
+			this.incSal = function(incSalValue){
+				this.sal +=  incSalValue;
+				return this;
+			}
+
+		}
+
+		 
+		 oEmp = new empObj("rajesh",5000);
+		 alert(oEmp.sal);
+
+		 alert(oEmp.incSal(400).incSal(1400).incSal(1).sal);
+		 console.log(oEmp);
+		 oEmp.incSal(1400);
+			alert(oEmp.name)
+
+		
+</script>
+</html>

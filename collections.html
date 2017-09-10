@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="AddEle" value="AddEle" onclick="addElementToArray();">
+	<input type="button" name="removeChild" value="removeChild" onclick="removeChildFromDiv();">
+
+</body>
+<script type="text/javascript">
+	var ar1 = [];
+
+	ar1["one0"] = "jag1";
+	ar1["one1"] = "jag2";
+	ar1["one2"] = "jag3";
+	ar1["one3"] = "jag4";
+	ar1["one4"] = "2jag4";
+
+	var ar2 = [];
+
+	ar2["one0"] = "2jag1";
+	ar2["one1"] = "2jag2";
+	ar2["one2"] = "2jag3";
+	ar2["one3"] = "2jag4";
+	ar2["one4"] = "22jag4";
+
+	console.log(ar2.length);
+
+	var ar3 = [];
+
+	ar3["one0"] = "jag1";
+	ar3["one1"] = "jag2";
+	ar3["one2"] = "jag3";
+	ar3["one3"] = "jag4";
+	ar3["one4"] = "2jag4";
+
+	var ar = [ar1,ar2,ar3]
+
+	for(key in ar){
+		for(k in ar[key]){
+			console.log(ar[key][k]);
+		}
+	}
+
+	var ar9 = [];
+
+	ar9[9] ="text";
+
+	console.log(ar9.length)
+
+	ar9["name"] = "rajesh";
+	console.log(ar9.length)
+</script>
+</html>

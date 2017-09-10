@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="sum" value="sum result" onclick="sumOfEle(1,2,sumOfEle2);">
+	<input type="button" name="sum2" value="sum result" onclick="sumOfEle(12,6,mulOfEle2);">
+	
+	
+
+</body>
+<script type="text/javascript">
+	
+	function sumOfEle(a,b,sumFun){
+		alert("sum is "+ (a+b).toString());
+
+		sumFun(a,b);
+	}
+
+	var sumOfEle2 = function(a,b){
+		alert("callback sum is "+ (a+b).toString());
+	}
+	var mulOfEle2 = function(a,b){
+		alert("callback sum is "+ (a+b).toString());
+	}
+</script>
+</html>

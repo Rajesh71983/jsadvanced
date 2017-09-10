@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="AddEle" value="AddEle" onclick="addElementToArray();">
+	<input type="button" name="removeChild" value="removeChild" onclick="removeChildFromDiv();">
+
+</body>
+<script type="text/javascript">
+	var ar1 = Array(4);
+
+	ar1[0] = "jag1";
+	ar1[1] = "jag2";
+	ar1[2] = "jag3";
+	ar1[3] = "jag4";
+	ar1[4] = "2jag4";
+	var arrayDiv = document.getElementById('arrayDiv');
+	function addElementToArray(){
+		var arrLen= ar1.length;
+
+		var itemToAdd= document.getElementById('arrayEle').value;
+
+		ar1[arrLen] = itemToAdd;
+
+		for(i=0;i<ar1.length;i++){
+			
+			var newDiv = document.createElement('div');
+
+			var divContent = 'the first' + i.toString() + 'value is' + ar1[i];
+
+			newDiv.innerHTML=divContent;
+
+			arrayDiv.appendChild(newDiv);
+
+		}
+	}
+
+	function removeChildFromDiv() {
+
+		// body...
+		var arrayDiv = document.getElementById('arrayDiv');
+
+		while(arrayDiv.hasChildNodes()){
+			arrayDiv.removeChild(arrayDiv.lastChild);
+		}
+	}
+
+	var ar2 = new Array();
+
+	var ar3 = Array("1","2","3");
+
+	var ar4 = ["1","2","3"];
+</script>
+</html>

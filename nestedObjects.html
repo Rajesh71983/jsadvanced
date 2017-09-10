@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax 2</title>
+</head>
+<body>
+	<input type="text" id="arrayEle">
+	<div id="arrayDiv"></div>
+	<input type="button" name="sum"  id="dummyBtn" value="i am dummy. please click the button below to make me functioning" >
+	<input type="button" name="sum2" value="click me" onclick="sumOfEle();">
+	
+	
+
+</body>
+<script type="text/javascript">	
+		var nestedObj = {ename:"rajesh",
+			
+			incSal : {
+				incresedSal:7000,
+				promotion:"lead"
+			}	
+		}
+
+		 console.log(nestedObj.ename+"  "+nestedObj.incSal.promotion);
+
+		var empObj =  function(ename,sal,incSal,designation){
+
+			this.ename=ename;
+			this.sal=sal;
+			//Model 1
+			/*this.incSal = {
+				incresedSal:incSal,
+				promotion:designation
+			}*/
+
+			//Model 2
+
+			this.incSal = new deptO(incSal,designation);
+
+		}
+
+		var deptO = function (incSal,designation) {
+			// body...
+			this.incresedSal = incSal;
+			this.promotion = designation;
+		}
+
+		 
+		 oEmp = new empObj("rajesh",5000,500,"tech lead");
+
+		 console.log(oEmp.ename+"  "+oEmp.incSal.promotion);
+		 
+
+		
+</script>
+</html>
